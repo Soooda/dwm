@@ -7,3 +7,4 @@ Append `exec dwm` to `/etc/X11/xinit/xinitrc`.
 ## Patches Applied
 * dwm-autostart-20161205-bb3bd6f.diff
 * dwm-activetagindicatorbar-6.2.diff
+* dwm-autoresize-20160718-56a31dc.diff
