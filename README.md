@@ -4,4 +4,5 @@ The only reason having this repo is for my own convenience. Credits to all those
 ## Start DWM when X is run
 Append `exec dwm` to `/etc/X11/xinit/xinitrc`.
 
-
+## Patches Applied
+**dwm-autostart-20161205-bb3bd6f.diff**
