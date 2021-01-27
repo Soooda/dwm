@@ -19,7 +19,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+static const char *tags[] = { "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX" };
 
 static const Rule rules[] = {
     /* xprop(1):
@@ -38,8 +38,8 @@ static const int resizehints = 1;    /* 1 means respect size hints in tiled resi
 
 static const Layout layouts[] = {
     /* symbol     arrange function */
-    { "Tile",      tile },    /* first entry is default */
-    { "Float",      NULL },    /* no layout function means floating behavior */
+    { "叠",      tile },    /* first entry is default */
+    { "浮",      NULL },    /* no layout function means floating behavior */
     { "[M]",      monocle },
 };
 
