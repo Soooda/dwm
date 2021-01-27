@@ -9,3 +9,4 @@ Append `exec dwm` to `/etc/X11/xinit/xinitrc`.
 * dwm-awesomebar-20200907-6.2.diff
 * dwm-bar-height-6.2.diff
 * dwm-clientindicatorshidevacant-6.2.diff
+* dwm-cool-autostart-6.2.diff

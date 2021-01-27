@@ -7,7 +7,7 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
 static const int user_bh            = 0;	/* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
 static const char *fonts[]          = { "Hack Nerd Font:size=18" };
-static const char dmenufont[]       = "monospace:size=18";
+static const char dmenufont[]       = "Hack Nerd Font:size=18";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -18,6 +18,12 @@ static const char *colors[][3]      = {
     [SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
     [SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
     [SchemeHid]  = { col_cyan,  col_gray1, col_cyan  },
+};
+
+static const char *const autostart[] = {
+	"feh", "--bg-fill", "/home/soda/Pictures/Wallpaper/shinobu.png", NULL,
+	"picom", "-b", NULL,
+	NULL /* terminate */
 };
 
 /* tagging */
