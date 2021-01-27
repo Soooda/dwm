@@ -10,3 +10,4 @@ Append `exec dwm` to `/etc/X11/xinit/xinitrc`.
 * dwm-bar-height-6.2.diff
 * dwm-clientindicatorshidevacant-6.2.diff
 * dwm-cool-autostart-6.2.diff
+* dwm-dragmfact-6.2.diff
