@@ -3,6 +3,7 @@ The only reason having this repo is for my own convenience. Credits to all those
 
 ## Start DWM when X is run
 Append `exec dwm` to `/etc/X11/xinit/xinitrc`.
+Or use `exec dwm` in '~/.xinitrc' (Better)
 
 ## Patches Applied
 * dwm-autoresize-20160718-56a31dc.diff
