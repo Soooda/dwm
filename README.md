@@ -18,3 +18,4 @@ Or use `exec dwm` in '~/.xinitrc' (Better)
 * dwm-vanitygaps-20200610-f09418b.diff
 * dwm-r1522-viewontag.diff
 * dwm-alpha-20201019-61bb8b2.diff
+* dwm-savefloats-20181212-b69c870.diff
