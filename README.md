@@ -10,6 +10,7 @@ Or use `exec dwm` in '~/.xinitrc' (Better)
 * dwm-awesomebar-20200907-6.2.diff
 * dwm-bar-height-6.2.diff
 * dwm-clientindicatorshidevacant-6.2.diff
+> Client indicator part is removed,but hide vacant is kept.
 * dwm-cool-autostart-6.2.diff
 * dwm-dragmfact-6.2.diff
 * dwm-noborder-6.2.diff
