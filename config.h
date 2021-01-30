@@ -11,7 +11,7 @@ static const int smartgaps          = 0;        /* 1 means no outer gap when the
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
 static const Bool viewontag         = True;     /* Switch view on tag switch */
-static const int user_bh            = 0;	/* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
+static const int user_bh            = 0;    /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
 static const char *fonts[]          = { "Hack Nerd Font:size=18" };
 static const char dmenufont[]       = "Hack Nerd Font:size=14";
 static const char col_gray1[]       = "#222222";
@@ -28,17 +28,17 @@ static const char *colors[][3]      = {
     [SchemeHid]  = { col_cyan,  col_gray1, col_cyan  },
 };
 static const unsigned int alphas[][3]      = {
-	/*               fg      bg        border     */
-	[SchemeNorm] = { OPAQUE, baralpha, borderalpha },
-	[SchemeSel]  = { OPAQUE, baralpha, borderalpha },
+    /*               fg      bg        border     */
+    [SchemeNorm] = { OPAQUE, baralpha, borderalpha },
+    [SchemeSel]  = { OPAQUE, baralpha, borderalpha },
 };
 
 static const char *const autostart[] = {
-	"feh", "--bg-fill", "/home/soda/Pictures/Wallpaper/shinobu.png", NULL,
-	"sh", "-c", "while true; do /home/soda/Libraries/Suckless/dwm/dwm-status.sh; sleep 2; done", NULL,
+    "feh", "--bg-fill", "/home/soda/Pictures/Wallpaper/shinobu.png", NULL,
+    "sh", "-c", "while true; do /home/soda/Libraries/Suckless/dwm/dwm-status.sh; sleep 2; done", NULL,
     "fcitx", NULL,
-	"picom", "-b", NULL,
-	NULL /* terminate */
+    "picom", "-b", NULL,
+    NULL /* terminate */
 };
 
 /* tagging */
@@ -88,29 +88,29 @@ static Key keys[] = {
     { MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
     { MODKEY,                       XK_b,      togglebar,      {0} },
     { MODKEY,                       XK_j,      focusstackvis,  {.i = +1 } },
-	{ MODKEY,                       XK_k,      focusstackvis,  {.i = -1 } },
-	{ MODKEY|ShiftMask,             XK_j,      focusstackhid,  {.i = +1 } },
-	{ MODKEY|ShiftMask,             XK_k,      focusstackhid,  {.i = -1 } },
+    { MODKEY,                       XK_k,      focusstackvis,  {.i = -1 } },
+    { MODKEY|ShiftMask,             XK_j,      focusstackhid,  {.i = +1 } },
+    { MODKEY|ShiftMask,             XK_k,      focusstackhid,  {.i = -1 } },
     { MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
     { MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
     { MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
     { MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
-	//{ MODKEY|Mod4Mask,              XK_h,      incrgaps,       {.i = +1 } },
-	//{ MODKEY|Mod4Mask,              XK_l,      incrgaps,       {.i = -1 } },
-	//{ MODKEY|Mod4Mask|ShiftMask,    XK_h,      incrogaps,      {.i = +1 } },
-	//{ MODKEY|Mod4Mask|ShiftMask,    XK_l,      incrogaps,      {.i = -1 } },
-	//{ MODKEY|Mod4Mask|ControlMask,  XK_h,      incrigaps,      {.i = +1 } },
-	//{ MODKEY|Mod4Mask|ControlMask,  XK_l,      incrigaps,      {.i = -1 } },
-	//{ MODKEY|Mod4Mask,              XK_0,      togglegaps,     {0} },
-	//{ MODKEY|Mod4Mask|ShiftMask,    XK_0,      defaultgaps,    {0} },
-	//{ MODKEY,                       XK_y,      incrihgaps,     {.i = +1 } },
-	//{ MODKEY,                       XK_o,      incrihgaps,     {.i = -1 } },
-	//{ MODKEY|ControlMask,           XK_y,      incrivgaps,     {.i = +1 } },
-	//{ MODKEY|ControlMask,           XK_o,      incrivgaps,     {.i = -1 } },
-	//{ MODKEY|Mod4Mask,              XK_y,      incrohgaps,     {.i = +1 } },
-	//{ MODKEY|Mod4Mask,              XK_o,      incrohgaps,     {.i = -1 } },
-	//{ MODKEY|ShiftMask,             XK_y,      incrovgaps,     {.i = +1 } },
-	//{ MODKEY|ShiftMask,             XK_o,      incrovgaps,     {.i = -1 } },
+    //{ MODKEY|Mod4Mask,              XK_h,      incrgaps,       {.i = +1 } },
+    //{ MODKEY|Mod4Mask,              XK_l,      incrgaps,       {.i = -1 } },
+    //{ MODKEY|Mod4Mask|ShiftMask,    XK_h,      incrogaps,      {.i = +1 } },
+    //{ MODKEY|Mod4Mask|ShiftMask,    XK_l,      incrogaps,      {.i = -1 } },
+    //{ MODKEY|Mod4Mask|ControlMask,  XK_h,      incrigaps,      {.i = +1 } },
+    //{ MODKEY|Mod4Mask|ControlMask,  XK_l,      incrigaps,      {.i = -1 } },
+    //{ MODKEY|Mod4Mask,              XK_0,      togglegaps,     {0} },
+    //{ MODKEY|Mod4Mask|ShiftMask,    XK_0,      defaultgaps,    {0} },
+    //{ MODKEY,                       XK_y,      incrihgaps,     {.i = +1 } },
+    //{ MODKEY,                       XK_o,      incrihgaps,     {.i = -1 } },
+    //{ MODKEY|ControlMask,           XK_y,      incrivgaps,     {.i = +1 } },
+    //{ MODKEY|ControlMask,           XK_o,      incrivgaps,     {.i = -1 } },
+    //{ MODKEY|Mod4Mask,              XK_y,      incrohgaps,     {.i = +1 } },
+    //{ MODKEY|Mod4Mask,              XK_o,      incrohgaps,     {.i = -1 } },
+    //{ MODKEY|ShiftMask,             XK_y,      incrovgaps,     {.i = +1 } },
+    //{ MODKEY|ShiftMask,             XK_o,      incrovgaps,     {.i = -1 } },
     { MODKEY|ShiftMask,               XK_Return, zoom,           {0} },
     { MODKEY,                       XK_Tab,    view,           {0} },
     { MODKEY,                       XK_q,      killclient,     {0} },
@@ -125,8 +125,8 @@ static Key keys[] = {
     { MODKEY,                       XK_period, focusmon,       {.i = +1 } },
     { MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
     { MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-	//{ MODKEY,                       XK_s,      show,           {0} },
-	//{ MODKEY,                       XK_h,      hide,           {0} },
+    //{ MODKEY,                       XK_s,      show,           {0} },
+    //{ MODKEY,                       XK_h,      hide,           {0} },
     TAGKEYS(                        XK_1,                      0)
     TAGKEYS(                        XK_2,                      1)
     TAGKEYS(                        XK_3,                      2)
@@ -157,5 +157,3 @@ static Button buttons[] = {
     { ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
 };
 
-/* quitting */
-static const int EMPTY_WINDOW_COUNT = 3;
