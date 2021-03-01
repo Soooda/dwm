@@ -34,6 +34,8 @@ static const unsigned int alphas[][3]      = {
 };
 
 static const char *const autostart[] = {
+    "xrandr", "--output", "DP-0", "--mode", "1920x1080", "--rate", "240", NULL,
+    "xrandr", "--output", "DP-2", "--mode", "1920x1080", "--rate", "144", NULL,
     "feh", "--bg-fill", "/home/soda/Pictures/Wallpaper/shinobu.png", NULL,
     "sh", "-c", "while true; do /home/soda/Libraries/suckless/dwm/dwm-status.sh; sleep 2; done", NULL,
     // "fcitx", NULL,
