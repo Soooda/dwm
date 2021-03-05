@@ -39,7 +39,6 @@ static const char *const autostart[] = {
    "feh", "--bg-fill", "/home/soda/Pictures/Wallpaper/shinobu.png", NULL,
     "sh", "-c", "while true; do /home/soda/Libraries/Suckless/dwm/dwm-status.sh; sleep 2; done", NULL,
     "fcitx", NULL,
-    "dropbox", NULL,
     "picom", "-b", NULL,
     NULL /* terminate */
 };
@@ -122,8 +121,8 @@ static Key keys[] = {
     { MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
     // { MODKEY,                       XK_space,  setlayout,      {0} },
     { MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
-    { MODKEY,                       XK_0,      view,           {.ui = ~0 } },
-    { MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
+    // { MODKEY,                       XK_0,      view,           {.ui = ~0 } },
+    // { MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
     { MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
     { MODKEY,                       XK_period, focusmon,       {.i = +1 } },
     { MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
