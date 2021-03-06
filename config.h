@@ -12,8 +12,12 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
 static const Bool viewontag         = True;     /* Switch view on tag switch */
 static const int user_bh            = 0;    /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
-static const char *fonts[]          = { "Hack Nerd Font:size=18" };
-static const char dmenufont[]       = "Hack Nerd Font:size=14";
+static const char *fonts[]          = {
+    "Hack:size=18",
+    "Font Awesome 5 Free Solid:size=18",
+    "Font Awesome 5 Brands:size=18",
+};
+static const char dmenufont[]       = "Hack:size=14";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -37,7 +41,7 @@ static const char *const autostart[] = {
    "xrandr", "--output", "DP-0", "--mode", "1920x1080", "--rate", "240", NULL,
    "xrandr", "--output", "DP-2", "--mode", "1920x1080", "--rate", "144", NULL,
    "feh", "--bg-fill", "/home/soda/Pictures/Wallpaper/shinobu.png", NULL,
-    "sh", "-c", "while true; do /home/soda/Libraries/Suckless/dwm/dwm-status.sh; sleep 2; done", NULL,
+    "bash", "-c", "/home/soda/Libraries/Suckless/dwm/dwm-status.sh", NULL,
     "fcitx", NULL,
     "picom", "-b", NULL,
     NULL /* terminate */
