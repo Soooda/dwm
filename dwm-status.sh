@@ -29,32 +29,34 @@ function get_velocity {
 }
 
 # Set initial values
-get_bytes
-old_received_bytes=$received_bytes
-old_transmitted_bytes=$transmitted_bytes
-old_time=$now
+# get_bytes
+# old_received_bytes=$received_bytes
+# old_transmitted_bytes=$transmitted_bytes
+# old_time=$now
 
 while true; do
     LOCALTIME=$(date '+%Y年%m月%d日|%H:%M')
     # DISK=$(df -Ph | grep "/dev/sda6" | awk {'print $5'})
-    MEM=$(free -h --kilo | awk '/^Mem:/ {print $3 "/" $2}')
-    CPU=$(top -bn1 | grep "Cpu(s)" | sed "s/.*, *\([0-9.]*\)%* id.*/\1/" | awk '{print 100 - $1"%"}')
+    # MEM=$(free -h --kilo | awk '/^Mem:/ {print $3 "/" $2}')
+    # CPU=$(top -bn1 | grep "Cpu(s)" | sed "s/.*, *\([0-9.]*\)%* id.*/\1/" | awk '{print 100 - $1"%"}')
     # TOTALDOWN=$(ifconfig enp34s0 | grep "RX packets" | awk {'print $6 $7'})
     # TOTALUP=$(ifconfig enp34s0 | grep "TX packets" | awk {'print $6 $7'})
     # WEATHER=$(curl wttr.in?format="%l:+%m+%p+%w+%t+%c+%C")
-    # WEATHER=$(curl wttr.in?format=1)
+    # WEATHER=$(curl wttr.in/Xiamen?format="%l:+%C+%t");
 
     # Calculates speeds
-    get_bytes
-    vel_recv=$(get_velocity $received_bytes $old_received_bytes $now)
-    vel_trans=$(get_velocity $transmitted_bytes $old_transmitted_bytes $now)
+    # get_bytes
+    # vel_recv=$(get_velocity $received_bytes $old_received_bytes $now)
+    # vel_trans=$(get_velocity $transmitted_bytes $old_transmitted_bytes $now)
 
-    xsetroot -name " $MEM|$CPU|$vel_recv|$vel_trans|$LOCALTIME "
+    # xsetroot -name " $MEM|$CPU|$vel_recv|$vel_trans|$LOCALTIME "
+    # xsetroot -name " $MEM|$CPU|$WEATHER|$LOCALTIME "
+    xsetroot -name " $LOCALTIME "
 
     # Update old values to perform new calculations
-    old_received_bytes=$received_bytes
-    old_transmitted_bytes=$transmitted_bytes
-    old_time=$now
+    # old_received_bytes=$received_bytes
+    # old_transmitted_bytes=$transmitted_bytes
+    # old_time=$now
 
-    sleep 1s
+    sleep 30s
 done
