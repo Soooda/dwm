@@ -29,6 +29,13 @@ static const unsigned int alphas[][3]      = {
 	[SchemeSel]  = { OPAQUE, baralpha, borderalpha },
 };
 
+
+static const char *const autostart[] = {
+	"feh", "--bg-fill", "/home/soda/Code/config/Wallpaper/The First Snow Fall.jpg", NULL,
+	"picom", "-b", NULL,
+	NULL /* terminate */
+};
+
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
